@@ -32,6 +32,15 @@ li a:hover:not(.active) {
 	text-shadow: 2px 2px 8px #FFFFFF;
 }
 
+
+
+
+
+
+ #wrapper {
+	position: relative;
+}
+
 .active {
     background-color: #1C81ED;
 }
