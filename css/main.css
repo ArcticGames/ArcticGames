@@ -1,0 +1,19 @@
+.button {
+	transition-duration: 0.5s;
+	background-color: #2ECCFA;
+	border: none;
+	padding: 15px 32px;
+	color: white;
+	border-radius: 2px;
+	display: inline-block;
+	
+}
+.button:hover {
+	background-color: #000289;
+}
+
+#quick {
+	float: left;
+	position: relative;
+	left: 50%;
+}
