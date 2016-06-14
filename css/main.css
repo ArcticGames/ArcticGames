@@ -29,13 +29,10 @@ li a {
 
 li a:hover:not(.active) {
     background-color: #111;
-	text-shadow: 0 0 36px #FFFFFF ;
+	text-shadow: 2px 2px 8px #FFFFFF;
 }
 
 .active {
     background-color: #1C81ED;
 }
 
-h1 {
-    text-shadow: 2px 2px 8px #FF0000;
-}
