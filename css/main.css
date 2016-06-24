@@ -43,13 +43,23 @@ li a:hover:not(.active) {
   background-color: #1C81ED;
 }
 
-button {
-	background-color: #B3B3B3
-	
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
-class: button-liste:hover:not(.active){
-	background-color: #5E5E5E
-	
-	
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
