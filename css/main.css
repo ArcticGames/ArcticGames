@@ -22,15 +22,17 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: #A3A3A3;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  
 }
 
 li a:hover:not(.active) {
   background-color: #111;
 	text-shadow: 2px 2px 8px #FFFFFF;
+	color: #FFFFFF
 }
 
 #wrapper {
