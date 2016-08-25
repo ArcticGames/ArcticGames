@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-style: solid;
+    border-width: 0px 0px 4px 0px;
+    border-color: #1a8cff;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: #B3B3B3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #111;
+    text-shadow: 2px 2px 8px #FFFFFF;
+    color: #FFFFFF
+}
+#wrapper {
+    position: relative;
+}
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
+    <<<<<<< HEAD margin: 5px;
+    =======outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 9px #999;
+    margin-left: 2px;
+    >>>>>>> origin/master
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover span {
+    padding-right: 25px;
+}
+<<<<<<< HEAD .button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+=======.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+>>>>>>> origin/master
