@@ -2,7 +2,6 @@ body {
   background-image: url(background.jpg);
   background-repeat: no-repeat;
   background-position: right top;
-  margin-right: 200px;
   background-attachment: fixed;
 }
 
@@ -17,14 +16,13 @@ body {
 
 #logo {
   display: block;
-  margin-top: 10%;
-  margin-left: 35%;
-  margin-right: 35%;
+  margin-top:10%;
+  vertical-align: middle;
 }
 
 .text {
   color: #000000;
   font-size: 24px;
-  font-family: "Helvetica", serif;
+  font-family: "Helvetica";
 
 }
