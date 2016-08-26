@@ -52,7 +52,7 @@ body {
     float: left;
 }
 
-.navbar .navtext {
+.navbar a {
     display: block;
     color: white;
     text-align: center;
@@ -60,17 +60,17 @@ body {
     text-decoration: none;
 }
 
-.navbar .navtext:hover:not(.active) {
+.navbar a:hover:not(.active) {
     background-color: #e45a3a;
 }
 
-.active {
+.active  {
   background-color: #e45a3a;
 
 }
 
-.active:hover {
-  background-color: #C24225;
+.active {
+background-color: #C24225;
 
 }
 
