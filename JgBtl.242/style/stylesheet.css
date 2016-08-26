@@ -5,13 +5,14 @@ body {
   background-attachment: fixed;
 }
 
-#block {
+#block:not(.ul) {
   background-color: white;
   color: black;
   position: absolute;
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 40%;
+  margin-top: 20%;
+
 }
 
 #logo {
@@ -24,6 +25,7 @@ body {
   color: #000000;
   font-size: 20px;
   font-family: "Helvetica";
+  padding: 30px;
 
 }
 
@@ -32,4 +34,32 @@ body {
   font-size: 40px;
   text-align: center;
 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #e45a3a;
+}
+
+.active {
+    background-color: #e45a3a;
 }
