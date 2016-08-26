@@ -1,0 +1,28 @@
+body {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+#block {
+  background-color: white;
+  color: black;
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 40%;
+}
+
+#logo {
+  display: block;
+  margin-top:10%;
+  vertical-align: middle;
+}
+
+.text {
+  color: #000000;
+  font-size: 24px;
+  font-family: "Helvetica";
+
+}
