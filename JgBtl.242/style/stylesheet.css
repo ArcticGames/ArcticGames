@@ -36,19 +36,23 @@ body {
 
 }
 
-ul {
+/* Navbar start */
+
+#navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    font-family: serif;
+    font-size: 20px;
 }
 
-li {
+.navbar {
     float: left;
 }
 
-li a {
+.navbar .navtext {
     display: block;
     color: white;
     text-align: center;
@@ -56,10 +60,20 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.navbar .navtext:hover:not(.active) {
     background-color: #e45a3a;
 }
 
 .active {
-    background-color: #e45a3a;
+  background-color: #e45a3a;
+
 }
+
+.active:hover {
+  background-color: #C24225;
+
+}
+
+
+
+/* Navbar ende */
