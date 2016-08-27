@@ -1,8 +1,9 @@
 body {
   background-image: url(../pic/background.jpg);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: center;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 #block:not(.ul) {
