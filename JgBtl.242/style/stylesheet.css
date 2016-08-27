@@ -63,6 +63,10 @@ li a, .dropbtn {
     font-family: serif;
 }
 
+
+/* dropdown anfang */
+
+
 li a:hover:not(.active), .dropdown:hover .dropbtn {
     background-color: #e45a3a;
 }
@@ -71,7 +75,7 @@ li.dropdown {
     display: inline-block;
 }
 
-.wer-content {
+.Wer-content {
     display: none;
     position: absolute;
     background-color: #434745;
@@ -79,7 +83,7 @@ li.dropdown {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.wer-content a {
+.Wer-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
@@ -87,11 +91,44 @@ li.dropdown {
     text-align: left;
 }
 
-.wer-content a:hover {background-color: #f1f1f1}
+.Wer-content a:hover {background-color: #f1f1f1}
 
-.dropdown:hover .wer-content {
+.dropdown:hover .Wer-content {
     display: block;
 }
+
+/* ------------------------------------------- */
+
+.missionen-content {
+    display: none;
+    position: absolute;
+    background-color: #434745;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.missionen-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.missionen-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .missionen-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+/* dropdown ende */
 
 .active {
   background-color: #e45a3a;
