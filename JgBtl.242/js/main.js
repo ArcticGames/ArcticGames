@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var d = new Date();
+  var nextEvent = new Date(
+  $('.clock').attr('date-timer', )
   $('.clock').TimeCircles({
     "animation": "ticks",
     "bg_width": 0.7,
@@ -32,8 +35,7 @@ $(document).ready(function() {
     };
   });
 
-  var date = Date.now()
-  console.log(date);
+  console.log(d.getSeconds());
 
 
 
