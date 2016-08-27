@@ -40,83 +40,65 @@ body {
 
 /* Navbar start */
 
-#navbar {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    font-family: serif;
-    font-size: 20px;
+    background-color: #434745;
 }
 
-.navbar {
+li {
     float: left;
 }
 
-.navbar a {
-    display: block;
+li a, .dropbtn {
+    display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
+    font-size: 20px;
+    font-family: serif;
 }
 
-.navbar a:hover:not(.active) {
+li a:hover:not(.active), .dropdown:hover .dropbtn {
     background-color: #e45a3a;
 }
 
-.active  {
-  background-color: #e45a3a;
-
-}
-
-.active:hover {
-background-color: #C24225;
-
-}
-
-/*dropdown*/
-
-.dropbtn {
-    background-color: #333;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
+li.dropdown {
     display: inline-block;
 }
 
-.dropdown-content {
+.wer-content {
     display: none;
-    position: relative;
-    background-color: #f9f9f9;
+    position: absolute;
+    background-color: #434745;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown-content a {
-    color: black;
+.wer-content a {
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
-    display: flex;
+    display: block;
+    text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.wer-content a:hover {background-color: #f1f1f1}
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .wer-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #e45a3a;
+.active {
+  background-color: #e45a3a;
+
 }
 
-/* dropdown */
+.active a:hover {
+  background-color: #D14626;
 
+}
 /* Navbar ende */
