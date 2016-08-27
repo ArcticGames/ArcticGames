@@ -1,0 +1,229 @@
+body {
+  background-image: url(../pic/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#block:not(.ul) {
+  background-color: white;
+  color: black;
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 0%;
+
+}
+
+#logo {
+  display: block;
+  margin-top:10%;
+  text-align: center;
+}
+
+p {
+  color: #000000;
+  font-size: 20px;
+  font-family: "Helvetica";
+  padding: 30px;
+
+}
+
+#main_titel {
+  color: #e45a3a;
+  font-size: 40px;
+  text-align: center;
+
+}
+
+#titel {
+  font-size: 60px;
+
+}
+
+
+#Mitgliederpic {
+  padding: 30px;
+
+}
+
+
+
+/* table */
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/* table */
+
+/* Navbar start */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #434745;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: serif;
+}
+
+
+/* dropdown anfang */
+
+
+li a:hover:not(.active), .dropdown:hover .dropbtn {
+    background-color: #e45a3a;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+/* ----- */
+
+.Wer-content {
+    display: none;
+    position: absolute;
+    background-color: #434745;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.Wer-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.Wer-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .Wer-content {
+    display: block;
+}
+
+/* ------------------------------------------- */
+
+.missionen-content {
+    display: none;
+    position: absolute;
+    background-color: #434745;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.missionen-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.missionen-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .missionen-content {
+    display: block;
+}
+
+/* ---------------------------------------------- */
+
+
+
+.Forum-content {
+    display: none;
+    position: absolute;
+    background-color: #434745;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.Forum-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.Forum-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .Forum-content {
+    display: block;
+}
+
+
+
+
+
+
+
+/* dropdown ende */
+
+.active {
+  background-color: #e45a3a;
+
+}
+
+.active a:hover {
+  background-color: #D14626;
+
+}
+/* Navbar ende */
+
+#trupp {
+  margin-bottom: 20px;
+
+}
+
+#server {
+  border: 9px;
+  margin: 15px;
+  padding: 15px;
+}
+
+#ts {
+  border: 9px;
+  margin: 15px;
+  padding: 15px;
+}
+
+#vid {
+  border: 9px;
+  padding: 5px 30px 30px 30px;
+}
+
+#datum {
+  font-size: 20px;
+  font-family: serif;
+  padding-left: 30px
+
+}
