@@ -32,6 +32,8 @@ $(document).ready(function() {
     };
   });
 
+  var date = Date.now()
+  console.log(date);
 
 
 
