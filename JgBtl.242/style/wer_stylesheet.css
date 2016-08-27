@@ -27,7 +27,7 @@ body {
   font-size: 20px;
   font-family: "Helvetica";
   padding: 30px;
-
+  padding-top: 0px;
 }
 
 #titel {
@@ -36,8 +36,6 @@ body {
   text-align: center;
 
 }
-
-
 
 /* Navbar start */
 
@@ -169,7 +167,8 @@ li.dropdown {
 /* Navbar ende */
 
 #trupp {
-  margin-bottom: 20px;
+  text-align: center;
+  margin: auto;
 
 }
 
