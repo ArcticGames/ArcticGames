@@ -167,3 +167,32 @@ li.dropdown {
 
 }
 /* Navbar ende */
+
+#trupp {
+  margin-bottom: 20px;
+
+}
+
+#server {
+  border: 9px;
+  margin: 15px;
+  padding: 15px;
+}
+
+#ts {
+  border: 9px;
+  margin: 15px;
+  padding: 15px;
+}
+
+#vid {
+  border: 9px;
+  padding: 5px 30px 30px 30px;
+}
+
+#datum {
+  font-size: 20px;
+  font-family: serif;
+  padding-left: 30px
+
+}
