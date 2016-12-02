@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "babyparse": "^0.4.6",
-    "chance": "^1.0.4"
+    "chance": "^1.0.4",
+    "colors": "^1.1.2",
+    "prompt": "^1.0.0"
   }
 }
