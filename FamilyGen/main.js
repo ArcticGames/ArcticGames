@@ -9,14 +9,16 @@ var readline = require('readline')
 var MaleNames = './materials/maleNames.csv', maleNames = fs.readFileSync(MaleNames, { encoding: 'binary' });
 var FemaleNames = './materials/femaleNames.csv', femaleNames = fs.readFileSync(FemaleNames, { encoding: 'binary' });
 var Surnames = './materials/surnames.csv', surnames = fs.readFileSync(Surnames, { encoding: 'binary' });
+var Values = './materials/values.csv', valuesFile = fs.readFileSync(Values, {encoding:'binary'});
 var rl = readline.createInterface(process.stdin, process.stdout);
 
 //Settings, e.g. likelihood
 var isBorn = 35;
-
+var tickSpeed = 3000; //Given in Miliseconds
+var eras = {medieval: 0, renaissance: 500, industrial: 800, modern: 1000};
 
 var peopleAmount = 0;
-var people = [];
+var people = {};
 var year = 0;
 
 rl.setPrompt('Year is '+year+'.  > ');
@@ -31,7 +33,11 @@ function newEntry(name, gender, fname, lastName, birthyear) {
     lastName: lastName,
     gender: gender,
     age: age,
-    birthyear: birthyear
+    birthyear: birthyear,
+    attributes: [{}],
+    str: undefined,
+    int: undefined,
+    dxt: undefined
   };
   //DEBUG: console_out('Created Entry: ' + name + ' with ID: ' + id.green + '. Gender is: ' + gender.red);
 };
@@ -69,6 +75,11 @@ Papa.parse(surnames, {
     sOutName = output.data;
   }
 });
+Papa.parse(valuesFile, {
+  complete: function(output) {
+    values = output.data;
+  }
+});
 
 //The main loop, created so it would have a 3 second delay before generating a new person.
 function loop() {
@@ -98,7 +109,7 @@ function loop() {
     year++
     increaseAge();
     loop();
-  }, 3000);
+  }, tickSpeed);
 };
 
 //This kicks of the main loop (no shit sherlock)
@@ -108,11 +119,13 @@ loop();
 rl.on('line', function (line) {
   var input = line.split(' ');
   if(input[0]=='info'){
-    console.log(input[1]);
-    console.log(people[input[1]]);
+    var dataSource = input[1]
+    console.log(dataSource);
+    console.log(people[dataSource]);
+    console_out(people[dataSource].attributes[0].test)
   }else if (input[0]=='exit') {
     console.log('Exiting...');
     process.exit();
-  }
+  };
   rl.prompt(true);
 });
