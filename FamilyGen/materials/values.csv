@@ -1,6 +1,10 @@
-,Medieval,Renaissance,Industrial,Modern
-Baby,30,15,,
-Child,15,5,,
-Teenager,13,5,,
-Adult,10,3,,
-Senior,40,40,,
+,"Medieval0,1","Renaissance0,2","Industrial0,3","Modern0,4",
+"Baby1,0",30,15,,,
+"Child2,0",5,5,,,
+"Teenager3,0",3,5,,,
+"Adult4,0",2,3,,,
+"Senior5,0",15,40,,,
+,,,,,
+Age Cat.,"Baby7,1","Child7,2","Teenager7,3","Adult7,4","Senior7,5"
+"Begin8,0",0,2,14,21,51
+"End9,0",1,13,20,50,200
