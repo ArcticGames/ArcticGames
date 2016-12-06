@@ -1,3 +1,5 @@
+//TODO add time periods
+//TODO make first changes towards families
 var Papa = require('babyparse');
 var fs = require('fs');
 var Chance = require('chance'), chance = new Chance();
@@ -24,21 +26,38 @@ var year = 0;
 rl.setPrompt('Year is '+year+'.  > ');
 
 //All of the functions are stored here. They should be pretty self-explanatory
-function newEntry(name, gender, fname, lastName, birthyear) {
+function newEntry(name, gender, fname, lastName, birthyear, isDead) {
   var foo = chance.natural({min:1, max:999999});
   var id = chance.pad(foo, 6);
   var age = 0; //chance.natural({min:0, max:90})
-  people[name] = {
-    id: id,
-    name: fname,
-    lastName: lastName,
-    gender: gender,
-    age: age,
-    birthyear: birthyear,
-    attributes: [{}],
-    str: undefined,
-    int: undefined,
-    dxt: undefined
+  if(isDead==true){
+    people[name] = {
+      id: id,
+      name: fname,
+      lastName: lastName,
+      gender: gender,
+      age: age,
+      birthyear: birthyear,
+      attributes: [{}],
+      str: undefined,
+      int: undefined,
+      dxt: undefined,
+      dead: true,
+      yearOfDeath: birthyear
+    };
+  }else{
+    people[name] = {
+      id: id,
+      name: fname,
+      lastName: lastName,
+      gender: gender,
+      age: age,
+      birthyear: birthyear,
+      attributes: [{}],
+      str: undefined,
+      int: undefined,
+      dxt: undefined
+    };
   };
   //DEBUG: console_out('Created Entry: ' + name + ' with ID: ' + id.green + '. Gender is: ' + gender.red);
 };
@@ -151,13 +170,24 @@ function loop() {
     var born = chance.bool({likelihood: isBorn});
     //Here it is checked if a child is born this year, and if so which gender it is.
     if(born==true){
-      if(gender=='Male'){
-        newEntry(cleanMaleName + cleanSurname, gender, mName, sName, year);
-        console_out(mName+' '+sName+" was born! It's a boy!");
-      }else if (gender=='Female') {
-        newEntry(cleanFemaleName + cleanSurname, gender, fName, sName, year);
-        console_out(fName+' '+sName+" was born! It's a girl!");
-      };
+      var deathAtBirth = chance.bool({likelihood: values[1][1]});
+      if(deathAtBirth==true){
+        if(gender=='Male'){
+          newEntry(cleanMaleName + cleanSurname, gender, mName, sName, year, true);
+          console_out(mName +' '+ sName + ' was stillborn.');
+        }else{
+          newEntry(cleanFemaleName + cleanSurname, gender, fName, sName, year, true);
+          console_out(fName +' ' +sName + ' was stillborn.');
+        }
+      }else{
+        if(gender=='Male'){
+          newEntry(cleanMaleName + cleanSurname, gender, mName, sName, year);
+          console_out(mName+' '+sName+" was born! It's a boy!");
+        }else if (gender=='Female') {
+          newEntry(cleanFemaleName + cleanSurname, gender, fName, sName, year);
+          console_out(fName+' '+sName+" was born! It's a girl!");
+        };
+      }
     };
     //All values are increased here and the loop is restarted.
     rl.setPrompt('Year is '+year+'.  > ');
@@ -177,9 +207,13 @@ rl.on('line', function (line) {
   var input = line.split(' ');
   var list = Object.keys(people);
   if(input[0]=='info'){
-    var dataSource = input[1]
-    console.log(dataSource);
-    console.log(people[dataSource]);
+    if(input[1]==undefined){
+      console_out('Please enter a name as well.'.red)
+    }else{
+      var dataSource = input[1]
+      console.log(dataSource);
+      console.log(people[dataSource]);
+    }
   }else if (input[0]=='exit') {
     console.log('Exiting...');
     process.exit();
@@ -212,6 +246,8 @@ rl.on('line', function (line) {
     }
     console_out('-----------------------------------------------'.green);
     console_out('\n');
+  }else if (input[0]=='help') {
+    console_out('\ninfo\nexit\npeople\n')
   };
   rl.prompt(true);
 });
