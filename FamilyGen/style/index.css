@@ -1,0 +1,21 @@
+.ticker{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  border-style: dashed;
+  height: 200px;
+  overflow: auto;
+  width: 400px;
+}
+::-webkit-scrollbar{
+  background-color: black;
+}
+::-webkit-scrollbar-thumb{
+  background-color: blue;
+}
+.menubar{
+  list-style-type: none;
+}
+li {
+  display: inline;
+}

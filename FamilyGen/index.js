@@ -25,13 +25,21 @@ var people = {};
 var year = 0;
 
 //All of the functions are stored here. They should be pretty self-explanatory
-function newScreenOutput(input, className){
+function newScreenOutput(input, destination, className){
   let element = document.createElement('P');
+  var ticker = document.getElementsByClassName('ticker')[0];
+  let idName = document.getElementById("ticker")
   element.innerHTML = input;
-  if(className!==undefined){
+  if(className !== undefined){
     element.classList.add(className);
   };
-  document.body.appendChild(element);
+  if(destination=='ticker'){
+    var isScrolledToBottom = idName.scrollHeight - idName.clientHeight <= idName.scrollTop + 1;
+    ticker.appendChild(element);
+    if(isScrolledToBottom){
+      idName.scrollTop = idName.scrollHeight - idName.clientHeight;
+    };
+  };
 };
 function newEntry(name, gender, fname, lastName, birthyear, isDead) {
   var foo = chance.natural({min:1, max:999999});
@@ -176,10 +184,10 @@ function loop() {
       }else{
         if(gender=='Male'){
           newEntry(cleanMaleName + cleanSurname, gender, mName, sName, year);
-          newScreenOutput(mName + ' ' + sName + ' was born.', 'birthMessage');
+          newScreenOutput(mName + ' ' + sName + ' was born.', 'ticker', 'birthMessage');
         }else if (gender=='Female') {
           newEntry(cleanFemaleName + cleanSurname, gender, fName, sName, year);
-          newScreenOutput(fName + ' ' + sName + ' was born.', 'birthMessage');
+          newScreenOutput(fName + ' ' + sName + ' was born.', 'ticker', 'birthMessage');
         };
       }
     };
